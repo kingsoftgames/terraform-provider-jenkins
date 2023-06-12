@@ -28,7 +28,7 @@ pipeline {
                 }
             }
             steps {
-                goreleaser snapshot: true
+                goreleaser goVersion: '1.20.5', snapshot: true
                 archiveArtifacts artifacts: 'dist/*.zip', fingerprint: true
             }
         }
